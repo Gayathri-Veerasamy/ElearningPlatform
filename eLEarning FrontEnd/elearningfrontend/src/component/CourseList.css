@@ -1,0 +1,256 @@
+/* CourseList.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f4f4;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e2a38;
+  color: #fff;
+  padding: 12px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #fff;
+  margin-left: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+}
+
+.nav-button:hover,
+.nav-button.active {
+  background-color: #2d3e50;
+}
+
+.logout-button {
+  background-color: #dc3545;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  color: white;
+  margin-left: 16px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.logout-button:hover {
+  background-color: #b52b3c;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.user-icon {
+  background-color: #ff9800;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.user-name {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.course-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.course-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.course-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.course-details {
+  padding: 16px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.course-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1e2a38;
+}
+
+.course-instructor {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 8px;
+}
+
+.course-desc {
+  font-size: 0.85rem;
+  color: #777;
+  flex-grow: 1;
+  margin-bottom: 12px;
+}
+
+.enroll-button {
+  align-self: flex-start;
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.enroll-button:hover:not(.disabled) {
+  background-color: #218838;
+}
+
+.enroll-button.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.course-error,
+.loading-text {
+  text-align: center;
+  color: #cc0000;
+  font-size: 1rem;
+}
+.course-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.course-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.course-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+}
+
+.course-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.course-details {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.course-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #1c1c1c;
+}
+
+.course-instructor {
+  font-size: 0.9rem;
+  color: #757575;
+  margin-bottom: 8px;
+}
+
+.course-desc {
+  font-size: 0.85rem;
+  color: #616161;
+  flex-grow: 1;
+  margin-bottom: 16px;
+}
+
+.enroll-button {
+  background-color: #ec5252;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s ease;
+}
+
+.enroll-button:hover:not(.disabled) {
+  background-color: #068018;
+}
+
+.enroll-button.disabled {
+  background-color: #bdbdbd;
+  cursor: not-allowed;
+}
